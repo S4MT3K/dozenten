@@ -14,7 +14,7 @@ spl_autoload_register(function ($className) {
     include 'class/' . $className . '.php';
 });
 
-$firma = new Dozent();
+$firma = new Firma();
 
 $firma->addDozentenToFirma();
 
