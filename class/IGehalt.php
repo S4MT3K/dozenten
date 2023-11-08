@@ -1,5 +1,5 @@
 <?php
 
-interface IGehalt{
+interface IGehalt{                      //besseren Namen finden (überbegriff)vvv
     public function getGehalt() : float;
 }

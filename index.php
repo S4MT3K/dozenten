@@ -16,10 +16,11 @@ spl_autoload_register(function ($className) {
 
 $firma = new Dozent();
 
-$firma->AddDozentenToFirma();
+$firma->addDozentenToFirma();
 
 echo '<pre>';
 print_r($firma);
 echo '</pre>';
 
 echo round($firma->getGesamtGehalt(), 2);
+

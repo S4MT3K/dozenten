@@ -6,9 +6,11 @@ class Dozent{
      */
     private array $dozenten = [];
 
-    public function AddDozentenToFirma(){ //Firma Klasse? Um dort dann 40% zu berechnen wäre besser
+    public function addDozentenToFirma(){ //Firma Klasse? Um dort dann 40% zu berechnen wäre besser
         $this->dozenten[] = new FestDozent(4500);
+        $this->dozenten[] = new FestDozent(4300);
         $this->dozenten[] = new HonorarDozent(17.40, 8, 0);
+        $this->dozenten[] = new HonorarDozent(27.40, 8, 2);
     }
 
     /**

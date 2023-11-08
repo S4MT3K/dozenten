@@ -1,48 +1,48 @@
 <?php
 
 class HonorarDozent implements IGehalt{
-    private float $Stundenlohn;
-    private float $AnzLehrstunden;
-    private float $Fehltage;
+    private float $stundenlohn;
+    private float $anzLehrstunden;
+    private float $fehltage;
 
-    public function __construct($Stdlohn, $Anzstd, $AnzFtage){
-        $this->Stundenlohn = $Stdlohn;
-        $this->AnzLehrstunden = $Anzstd;
-        $this->Fehltage = $AnzFtage;
+    public function __construct(float $stdlohn, float $anzstd, float $anzFtage){
+        $this->stundenlohn = $stdlohn;
+        $this->anzLehrstunden = $anzstd;
+        $this->fehltage = $anzFtage;
     }
 
     /**
-     * @param float $AnzLehrstunden
+     * @param float $anzLehrstunden
      */
-    public function setAnzLehrstunden(float $AnzLehrstunden): void{
-        $this->AnzLehrstunden = $AnzLehrstunden;
+    public function setAnzLehrstunden(float $anzLehrstunden): void{
+        $this->anzLehrstunden = $anzLehrstunden;
     }
 
     /**
-     * @param float $Stundenlohn
+     * @param float $stundenlohn
      */
-    public function setStundenlohn(float $Stundenlohn): void{
-        $this->Stundenlohn = $Stundenlohn;
+    public function setStundenlohn(float $stundenlohn): void{
+        $this->stundenlohn = $stundenlohn;
     }
 
     /**
      * @return float
      */
     public function getAnzLehrstunden(): float{
-        return $this->AnzLehrstunden;
+        return $this->anzLehrstunden;
     }
 
     /**
      * @return float
      */
     public function getStundenlohn(): float{
-        return $this->Stundenlohn;
+        return $this->stundenlohn;
     }
 
     /**
      * @return float
      */
     public function getGehalt() : float{
-        return ($this->Stundenlohn * $this->AnzLehrstunden) * (22 - $this->Fehltage); //22 weil pauschal 4x wochenende im Monat (30tage pauschal)
+        return ($this->stundenlohn * $this->anzLehrstunden) * (22 - $this->fehltage); //22 weil pauschal 4x wochenende im Monat (30tage pauschal)
     }
 }
